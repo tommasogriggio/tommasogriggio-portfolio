@@ -16,6 +16,32 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 
     <style>
+      /* FIX IMMAGINI PROGETTI SGRANATE */
+.project-card img, 
+#modal-content img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Non deforma l'immagine e riempie lo spazio */
+  object-position: center !important;
+  
+  /* Attiva la massima nitidezza sui browser moderni e schermi Retina */
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: pixelated !important;
+  
+  /* Forza l'accelerazione hardware per migliorare i dettagli dei bordi */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Assicura che i contenitori non distorcano l'immagine */
+.project-card .h-56,
+.modal-image-container {
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
         :root {
             --bg-color: #ffffff;
             --text-color: #0A0A0A;
@@ -384,7 +410,7 @@
                     <div class="floating-card-container w-full max-w-[280px]">
                         <div class="bg-white border border-gray-100 rounded-2xl p-4 blue-glow shadow-sm group hover:scale-[1.02] transition-all duration-300">
                             <div class="aspect-[3/4] w-full bg-gray-50 rounded-xl overflow-hidden relative flex items-center justify-center border border-gray-100">
-                                <img src="/src/assets/images/regenerated_image_1783586184222.jpg" alt="Tommaso Griggio" class="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300">
+                                <img src="https://i.ibb.co/bMy2HcJR/export.jpg" alt="Tommaso Griggio" class="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300" referrerPolicy="no-referrer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
                             </div>
                         </div>
