@@ -120,9 +120,9 @@
                               linear-gradient(to bottom, rgba(0, 82, 255, 0.03) 1px, transparent 1px);
         }
         .blur-art {
-            filter: blur(80px);
-            opacity: 0.15;
-            mix-blend-mode: multiply;
+            filter: blur(140px);
+            opacity: 0.85;
+            mix-blend-mode: normal;
         }
         
         /* Stili per l'effetto Flip Card 3D */
@@ -235,13 +235,13 @@
         }
     </style>
 </head>
-<body class="bg-[#fafafa] text-[#0A0A0A] antialiased selection:bg-[#0052FF] selection:text-white relative bg-grid-pattern">
+<body class="bg-white text-[#0A0A0A] antialiased selection:bg-[#0052FF] selection:text-white relative bg-grid-pattern">
 
-    <div class="absolute top-20 left-10 w-72 h-72 bg-[#0052FF] rounded-full blur-art pointer-events-none"></div>
-    <div class="absolute top-[60vh] right-10 w-96 h-96 bg-blue-400 rounded-full blur-art pointer-events-none"></div>
+    <div class="absolute top-10 left-10 w-[500px] h-[500px] rounded-full blur-art pointer-events-none" style="background: radial-gradient(circle, rgba(0, 82, 255, 0.12) 0%, rgba(0, 82, 255, 0) 70%);"></div>
+    <div class="absolute top-[45vh] right-10 w-[600px] h-[600px] rounded-full blur-art pointer-events-none" style="background: radial-gradient(circle, rgba(96, 165, 250, 0.12) 0%, rgba(96, 165, 250, 0) 70%);"></div>
 
     <!-- NAVBAR AGGIORNATA -->
-    <nav class="flex items-center justify-between px-6 md:px-10 h-16 bg-white/70 hover:bg-white/85 backdrop-blur-md sticky top-4 mt-4 -mb-20 mx-auto w-[calc(100%-2rem)] max-w-7xl z-50 rounded-2xl border border-white/50 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300">
+    <nav class="flex items-center justify-between p-3 md:p-4 bg-white/70 hover:bg-white/85 backdrop-blur-md sticky top-4 mt-4 -mb-20 mx-auto w-[calc(100%-2rem)] max-w-7xl z-50 rounded-2xl border border-white/50 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300">
         <div onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' })" class="text-base sm:text-lg font-bold text-[#0A0A0A] tracking-tight cursor-pointer hover:text-[#0052FF] transition-colors" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;">
             Portfolio Personale
         </div>
@@ -351,8 +351,7 @@
     </style>
 
     <!-- HERO SECTION CON TASTO ANIMATO -->
-    <section id="home" class="hero pt-28 pb-20 px-6 md:px-12 bg-white relative overflow-hidden min-h-screen flex items-center">
-        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(#0052FF 1px, transparent 1px), linear-gradient(90deg, #0052FF 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <section id="home" class="hero pt-28 pb-20 px-6 md:px-12 bg-transparent relative overflow-hidden min-h-screen flex items-center">
         <div class="absolute right-0 top-1/4 w-96 h-96 bg-[#0052FF] rounded-full blur-[120px] pointer-events-none opacity-10"></div>
         <div class="absolute left-1/3 bottom-10 w-80 h-80 bg-purple-500 rounded-full blur-[130px] pointer-events-none opacity-10"></div>
 
@@ -374,7 +373,7 @@
     </section>
 
     <!-- SEZIONE CHI SONO CON LAYOUT AD ALTO IMPATTO E INGRESSO ZOOM stile APPLE -->
-    <section id="chi-sono" class="py-24 px-6 border-t border-gray-100 bg-white relative">
+    <section id="chi-sono" class="py-24 px-6 border-t border-gray-100 bg-transparent relative">
         <style>
             @keyframes floatAnimation {
                 0% { transform: translateY(0px); }
@@ -399,7 +398,7 @@
                 
                 <div class="lg:col-span-5 space-y-6 text-gray-600 text-base font-light leading-relaxed border-l border-gray-100 pl-6 chi-sono-item">
                     <p>
-                        Ciao, mi chiamo <strong>Tommaso</strong> e credo che la creatività sia il motore di tutto: quando impari a reconocer i tuoi sogni, a svilupparli, può nascere davvero qualcosa di unico.
+                        Ciao, mi chiamo <strong>Tommaso</strong> e credo che la creatività sia il motore di tutto: quando impari a riconoscere i tuoi sogni, a svilupparli, può nascere davvero qualcosa di unico.
                     </p>
                     <p>
                         Sono una persona molto precisa e altrettanto curiosa, amo darmi da fare per trovare la soluzione migliore a ogni problema. Vedo la comunicazione come un grande puzzle: social media, advertising, fotografia e brand design sono i pezzi che unisco per raccontare un'unica storia capace di emozionare e generare valore.
@@ -736,11 +735,11 @@
             <div class="absolute -inset-4 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-[24px] blur-2xl opacity-40 pointer-events-none"></div>
             
             <!-- La Card Principale del progetto con sfumatura da bianco a celeste -->
-            <div class="relative bg-gradient-to-br from-white to-blue-50/70 rounded-2xl w-full h-full overflow-y-auto p-6 md:p-8 flex flex-col min-h-0 shadow-2xl">
+            <div class="relative bg-gradient-to-br from-white to-blue-50/70 rounded-2xl w-full h-full overflow-y-auto p-6 md:p-8 pb-12 md:pb-16 flex flex-col min-h-0 shadow-2xl">
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl p-2 cursor-pointer transition-colors z-10">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <div id="modal-content" class="flex-1 min-h-0">
+                <div id="modal-content" class="flex-1 min-h-0 pb-10">
                     <!-- Il contenuto dinamico inserito tramite JavaScript va qui -->
                 </div>
             </div>
@@ -1563,7 +1562,7 @@
                 <p class="text-xs text-neutral-500 font-light mt-0.5 font-sans">Scarica la presentazione del concept strategico Surgeon Energy</p>
               </div>
               <div class="flex flex-col sm:flex-row gap-2.5 w-full sm:w-auto">
-                <a href="/presentation_surgeon_energy.pdf" download="Presentazione_Surgeon_Energy.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#7c3aed] hover:bg-[#6d28d9] active:scale-[0.98] text-white font-bold rounded-full shadow-lg shadow-[#7c3aed]/10 hover:shadow-[#7c3aed]/20 transition-all duration-300 cursor-pointer group text-xs">
+                <a href="https://drive.google.com/file/d/1xB2t0-o5kudkLftkK1Pr9TSXKxk0Aat_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#7c3aed] hover:bg-[#6d28d9] active:scale-[0.98] text-white font-bold rounded-full shadow-lg shadow-[#7c3aed]/10 hover:shadow-[#7c3aed]/20 transition-all duration-300 cursor-pointer group text-xs">
                   <span>Scarica la presentazione</span>
                   <i class="fa-solid fa-chalkboard-user text-sm group-hover:translate-y-0.5 transition-transform"></i>
                 </a>
@@ -1933,6 +1932,14 @@
       <button onclick="closeCaroselliLightbox()" class="absolute top-4 right-4 z-[110] flex items-center justify-center w-8 h-8 rounded-full bg-black/50 text-white/80 hover:bg-neutral-800 hover:text-white transition-all cursor-pointer border border-neutral-700/50 text-xs" onclick="event.stopPropagation()">
         <i class="fa-solid fa-xmark text-sm"></i>
       </button>
+
+      <!-- Frecce di navigazione nel Lightbox -->
+      <button onclick="prevCaroselliLightbox(event)" class="absolute left-4 top-1/2 -translate-y-1/2 z-[110] flex items-center justify-center w-10 h-10 rounded-full bg-black/50 text-white/80 hover:bg-neutral-800 hover:text-white transition-all cursor-pointer border border-neutral-700/50">
+        <i class="fa-solid fa-chevron-left text-sm"></i>
+      </button>
+      <button onclick="nextCaroselliLightbox(event)" class="absolute right-4 top-1/2 -translate-y-1/2 z-[110] flex items-center justify-center w-10 h-10 rounded-full bg-black/50 text-white/80 hover:bg-neutral-800 hover:text-white transition-all cursor-pointer border border-neutral-700/50">
+        <i class="fa-solid fa-chevron-right text-sm"></i>
+      </button>
       
       <!-- Contenitore Immagine Lightbox -->
       <div class="max-w-[85vw] md:max-w-[75vw] max-h-[85vh] flex items-center justify-center relative overflow-hidden" onclick="event.stopPropagation()">
@@ -2169,8 +2176,12 @@
                         </div>
                     </div>
 
-                    <!-- Bottone d'azione principale -->
-                    <div class="pt-2">
+                    <!-- SEZIONE DOWNLOAD REEL COMPLETO -->
+                    <div class="pt-8 mt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 pb-8">
+                        <div class="text-center sm:text-left">
+                            <p class="text-sm font-semibold text-neutral-900">Video del Progetto Completo</p>
+                            <p class="text-xs text-gray-500 font-light mt-0.5">Scarica il video in alta risoluzione (MOV)</p>
+                        </div>
                         <a href="https://res.cloudinary.com/hogb9k6u/video/upload/fl_attachment/v1784107172/VideoOrganico_Macbook_xj8sgi.mov" download="VideoOrganico_Macbook_xj8sgi.mov" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500 hover:from-purple-700 hover:via-pink-600 hover:to-yellow-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer text-xs w-full sm:w-auto transform active:scale-95">
                             <span>Scarica il Reel</span>
                             <i class="fa-solid fa-download text-[10px]"></i>
@@ -2183,7 +2194,7 @@
 
     <!-- SEZIONE CONTATTI -->
     <section id="contatti" class="py-24 px-6 bg-[#0A0A0A] text-white relative overflow-hidden">
-        <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-[#0052FF] rounded-full blur-art pointer-events-none opacity-30"></div>
+        <div class="absolute -left-40 -bottom-40 w-[550px] h-[550px] rounded-full blur-art pointer-events-none" style="background: radial-gradient(circle, rgba(0, 82, 255, 0.2) 0%, rgba(0, 82, 255, 0) 70%);"></div>
         <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
             <div class="text-xs font-bold tracking-widest text-[#0052FF] uppercase">// CONTATTI</div>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight max-w-2xl mx-auto leading-tight">
@@ -2218,8 +2229,9 @@
 
             </div>
 
-            <div class="text-[10px] font-mono text-gray-600 pt-16">
-                &copy; 2026 — Costruito con precisione e un pizzico di follia creativa. Tutti i diritti riservati.
+            <div class="text-[11px] font-mono text-gray-500 pt-16 max-w-md mx-auto space-y-2 leading-relaxed">
+                <p>Creato con cura e attenzione ai dettagli, per offrire un'esperienza che rispecchia il mio approccio al lavoro.</p>
+                <p class="text-[10px] text-gray-600 pt-2">&copy; 2026 Tommaso Griggio. Tutti i diritti riservati.</p>
             </div>
         </div>
     </section>
@@ -4416,9 +4428,7 @@
                   </div>
                 </div>
 
-                <p class="text-[11px] text-white/50 font-light mt-6 leading-relaxed border-t border-white/5 pt-4">
-                  Oltre a editare al computer, ho imparato a usare la macchina fotografica sul campo: scatto sempre in manuale regolando da solo ISO, diaframma e tempi per gestire al meglio ogni scena.
-                </p>
+
               </div>
             </div>
 
